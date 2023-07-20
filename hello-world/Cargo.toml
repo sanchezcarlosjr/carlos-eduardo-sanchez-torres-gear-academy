@@ -5,6 +5,8 @@ edition = "2021"
 
 [dependencies]
 gstd = { git = "https://github.com/gear-tech/gear.git", branch = "testnet", features = ["debug"] }
+parity-scale-codec = { version = "3", default-features = false }
+scale-info = { version = "2", default-features = false }
 
 [build-dependencies]
 gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", branch = "testnet", features = ["wasm-opt"] }
