@@ -6,16 +6,11 @@ static mut GREETING: Option<String> = None;
 
 #[no_mangle]
 extern "C" fn init() {
-    let greeting = String::from_utf8(msg::load_bytes().expect("Can't load an init message")).expect("Can't decode to String");
+    let greeting = msg::load().expect("Can't load an init message");
     debug!("Program was initialized with message {:?}",greeting);
     unsafe { GREETING = Some(greeting) };
 }
 
-#[no_mangle]
-extern "C" fn state() {
-    let greeting = unsafe { GREETING.get_or_insert(Default::default()) };
-    msg::reply_bytes(greeting, 0).expect("Failed to share state");
-}
 
 #[no_mangle]
 extern "C" fn handle() {

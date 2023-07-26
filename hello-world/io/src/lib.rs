@@ -15,7 +15,7 @@ impl Metadata for ProgramMetadata {
     type State = String;
 }
 
-#[derive(Encode, Decode, TypeInfo)]
+#[derive(Encode, Decode, TypeInfo, Debug)]
 pub enum InputMessages {
     SendHelloTo(ActorId),
     SendHelloReply,
