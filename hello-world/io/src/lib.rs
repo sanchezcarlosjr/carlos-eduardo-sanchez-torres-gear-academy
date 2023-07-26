@@ -19,4 +19,5 @@ impl Metadata for ProgramMetadata {
 pub enum InputMessages {
     SendHelloTo(ActorId),
     SendHelloReply,
+    TEST
 }

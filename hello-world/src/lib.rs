@@ -1,5 +1,5 @@
 #![no_std]
-use gstd::{msg, prelude::*, debug,ActorId};
+use gstd::{msg, prelude::*, debug};
 use hello_world_io::InputMessages;
 
 static mut GREETING: Option<String> = None;
