@@ -10,6 +10,7 @@ scale-info = { version = "2", default-features = false }
 
 [build-dependencies]
 gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", branch = "testnet", features = ["wasm-opt"] }
+hello-world-io = { path = "io" }
 
 [dev-dependencies]
 gtest = { git = "https://github.com/gear-tech/gear.git", branch = "testnet" }
